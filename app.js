@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var api = require('./routes/group');
 var mongoose = require('mongoose');
 var PORT = process.env.PORT || 4242;
-var host = '0.0.0.0';
+var host = process.env.YOUR_HOST || '0.0.0.0';
 var home = require('./routes/home')
 
 var app = express();
@@ -31,7 +31,7 @@ app.use('/', home);
 
 app.use('/api/1.0', api);
 
-app.listen(process.env.PORT || 4242, host, function(){
+app.listen(PORT, host, function(){
     console.log('Server up and running');
 });
 
