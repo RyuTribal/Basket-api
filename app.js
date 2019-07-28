@@ -31,7 +31,7 @@ app.use('/', home);
 
 app.use('/api/1.0', api);
 
-app.listen(PORT, host, function(){
+app.listen(process.env.PORT || 4242, host, function(){
     console.log('Server up and running');
 });
 
