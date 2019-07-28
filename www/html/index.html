@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Basket-api Uploader</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <h4 class="page-header">Basketball group uploader</h4>
+            <form role="form">
+              <div class="form-group float-label-control">
+                <label for="">Title</label>
+                <input
+                  type="email"
+                  id="groupTitle"
+                  class="form-control"
+                  placeholder="Title"
+                />
+              </div>
+              <div class="form-group float-label-control">
+                <label for=""></label>
+                <select class="form-control" id="groupLvl">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+              </div>
+              <div class="form-group float-label-control">
+                <label for="">Thumbnail</label>
+                <input
+                  type="file"
+                  id="groupImg"
+                  class="form-control"
+                  accept="image/png, image/jpeg, image/gif"
+                />
+              </div>
+                <div class="form-group float-label-control">
+                    <button id="groupSubmit" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
