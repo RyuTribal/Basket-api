@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var api = require('./routes/group');
+//var api = require('./routes/group');
 var mongoose = require('mongoose');
 var PORT = process.env.PORT || 4242;
 var host = process.env.YOUR_HOST || '0.0.0.0';
@@ -29,7 +29,7 @@ app.use(express.static(__dirname + '/www'));
 
 app.use('/', home);
 
-app.use('/api/1.0', api);
+//app.use('/api/1.0', api);
 
 app.listen(PORT, host, function(){
     console.log('Server up and running');
