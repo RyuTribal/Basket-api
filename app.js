@@ -24,12 +24,12 @@ app.use(function(req, res, next) {
 
 app.use(express.static(__dirname + '/www'));
 
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+
 app.use('/', home);
 
 app.use('/api/1.0', api);
-
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.listen(PORT, host, function(){
     console.log('Server up and running');
